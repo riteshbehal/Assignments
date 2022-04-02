@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Sample template to copy file from source S3 bucket to Destination S3 bucket using Lambda function
+
+Parameters:
+  Environment:
+    Type: String
+    AllowedValues:
+      - jsdev
+      - pydev
+
+Mappings:
+  LanguageMap:
+    jsdev:
+      Runtime: "nodejs14.x"
+      name: 'jsdev'
+    
+    pydev:
+      Runtime: "python3.7"
+      name: 'pydev'
+
+Resources:
+
+  HelloLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+                
+
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Role: !GetAtt HelloLambdaRole.Arn
+      Runtime: !FindInMap [LanguageMap , !Ref Environment , Runtime]
+      Handler: index.my_handler
+      Code:
+        ZipFile: |
+          def my_handler(event, context):
+            message = 'Hello Lambda World!'
+            return message
+  
