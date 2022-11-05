@@ -1,0 +1,22 @@
+Create EFS 
+Add Security group of Ec2 instaces to EFS Network Security Group 
+
+Create 2 Ec2 Instances Linux
+Same Security groups for both instances 
+
+sudo su
+sudo yum install -y amazon-efs-utils
+sudo mkdir efs in both instances
+
+
+touch file1 file2 file3
+
+
+
+scannig files 
+
+
+
+
+
+
