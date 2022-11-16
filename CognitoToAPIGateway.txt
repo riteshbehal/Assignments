@@ -1,0 +1,57 @@
+Step No. 1
+
+Go to Cognito
+Create a User pool 
+Go On Review Defaults
+
+Step No.2 
+Add app Clients
+Note AppClientId
+
+Step No.3 
+Add App Client settings
+	Enable Cognito User Pool
+	Add Callback URL :https://example.com/callback
+	Add signout URL : https://example.com/signout
+
+Allowed all OAuth Scopes
+
+Step No. 4
+Choose Domain Name 
+	demoapponetest
+
+Step No. 5
+Go to URL and create users (use allcloud.ritesh@gmail.com)
+
+Step No. 6
+Extract the code from example.com/callback
+
+Step No. 7
+
+Create API Gateway
+	Create resources
+	create methods
+	Deloy API
+	Go to Authorizers
+	Create new Authorizers
+	Click on Launch Hosted UI
+	Change code with token in URL
+	And click on Signin
+	Copy the entire code to notepad (TokenId and Access_token)
+
+	Add Autorization as TokenSource
+	Test with TokenId on the UI
+	Go to Method Request 
+	Go to Authorization and add coginto as authorizer
+	Change OAuth scope as email
+	Deploy API
+
+
+Step No. 8
+
+Lambda Function 
+
+
+DemoAppClient
+3mobhpslco6hb8pu5lcp48omns
+code=6e869312-0c25-4072-aca1-63c496ae3f1f
