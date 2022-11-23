@@ -1,0 +1,113 @@
+Steps 
+
+docker build -t  dockerdemowebapp .
+docker run -d --publish 8888:5000 dockerdemowebapp
+
+Test in Local Browser 
+localhost:8888
+
+# connect to ECR
+aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 722123124527.dkr.ecr.ap-south-1.amazonaws.com
+
+
+## Create you ECR repo
+aws ecr create-repository --repository-name webapp --region ap-south-1
+
+## Get a password to use in next command 
+aws ecr get-login-password --region ap-south-1
+
+## Final Authenticate to ecr
+aws ecr --region us-east-1 | docker login -u AWS -p <Above encrytped password> <ACCOUNTID>.dkr.ecr.us-east-1.amazonaws.com/webapp
+
+
+docker tag dockerdemowebapp:latest 722123124527.dkr.ecr.ap-south-1.amazonaws.com/webapp:latest
+
+## push image to ECR
+docker push 722123124527.dkr.ecr.ap-south-1.amazonaws.com/webapp:latest
+
+Copy the URI
+
+722123124527.dkr.ecr.ap-south-1.amazonaws.com/webapp
+
+
+## Create a cluster in AWS
+
+## Create a Task Defnition for ec2 ## Add Container in task Definition 
+
+## Run Task
+
+722123124527.dkr.ecr.ap-south-1.amazonaws.com/webapp:latest
+
+
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+
+## Pre-requisites
+- Kubectl —  https://kubernetes.io/docs/tasks/tools/install-kubectl/
+- AWS CLI -  https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+- Aws iam authenticator — https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
+- eksctl — https://github.com/weaveworks/eksctl
+
+
+docker build -t  dockerlinuxapp .
+docker run -t -i -p 80:80 dockerlinuxapp
+
+Test in Local Browser 
+localhost:80
+
+# connect to ECR
+aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 722123124527.dkr.ecr.ap-south-1.amazonaws.com
+
+## Create you ECR repo
+aws ecr create-repository --repository-name linuxapp --region ap-south-1
+
+docker tag dockerlinuxapp:latest 722123124527.dkr.ecr.ap-south-1.amazonaws.com/webapp:latest
+
+## push image to ECR
+docker push 722123124527.dkr.ecr.ap-south-1.amazonaws.com/linuxapp:latest 
+
+## Create a VPC using Cloud Formation Script 
+aws cloudformation deploy --template-file C:\D-Data\Trainings\Assignments\docker-content\webapp\amazon-eks-vpc-private-subnets.yaml --stack-name vpcforeks
+
+## Create our cluster on EKS
+eksctl create cluster -f cluster.yaml --kubeconfig=C:\Users\behal\.kube\config
+
+## Create our deployment
+kubectl apply -f deployment.yaml
+
+## Create service
+kubectl apply -f service.yaml
+
+## service created
+kubectl get services
+
+##  pods of our application are running.
+kubectl get pods -o wide
+
+## get nodes command
+kubectl get nodes -o wide
+
+##
+Clean up steps (Very Important)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
