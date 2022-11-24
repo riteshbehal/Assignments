@@ -1,0 +1,59 @@
+Create a Provising Data Stream in Kinesis 
+Create a role with lambdaexcution role + kinesis permissions
+Create a lambda function as a consumer 
+Add trigger as kinesis
+go and push data to data stream using cyb google
+https://colab.research.google.com/
+
+pip install boto3
+create credentials in aws 
+use the same credentials in 
+
+Code:
+---------
+Data Ingestion Code:
+--------------------------------
+import json
+import datetime
+import random
+import boto3
+session=boto3.Session(aws_access_key_id='AKIA2QIPEN4X76LG4PVE',aws_secret_access_key='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', region_name='{ap-south-1}')
+
+client = session.client('kinesis')
+
+
+def getData(dataName, lowVal, highVal):
+   data = {}
+   data["datasetName"] = dataName
+   data["datasetValue"] = random.randint(lowVal, highVal) 
+   return data
+
+temp=0;
+
+while temp<100:
+   rnd = random.random()
+   if (rnd < 0.01):
+      data = json.dumps(getData("DemoData", 100, 120))  
+      client.put_record(StreamName="SalesData", Data=data, PartitionKey="1")
+      print('*************************** anomaly *********************** ' + data)
+   else:
+      data = json.dumps(getData("DemoData", 10, 20))  
+      client.put_record(StreamName="SalesData", Data=data, PartitionKey="1")
+      print(data)
+   temp=temp+1
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Lambda Code:
+-------------
+import json
+import base64
+
+def lambda_handler(event, context):
+    print(event)
+    for i in event['Records']:
+        print("Raw data :",i['kinesis']['data']);
+        print("base64 decoded data :",base64.b64decode(i['kinesis']['data']));
+        print("UTF-8 decoded data :",base64.b64decode(i['kinesis']['data']).decode('utf-8'));
+
