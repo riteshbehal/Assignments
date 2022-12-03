@@ -1,0 +1,9 @@
+AmazonEC2RoleforSSM
+AmazonSSMManagedInstanceCore
+AmazonSSMFullAccess
+
+session-manager-plugin
+
+
+aws ssm start-session --target i-08e43a9974621b253 --document-name AWS-StartPortForwardingSession --parameters "localPortNumber=9090,portNumber=3389" --region ap-south-1
+
