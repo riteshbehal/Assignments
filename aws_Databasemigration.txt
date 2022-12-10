@@ -1,0 +1,6 @@
+Create a DMS Role (S3fullaccess and rDSfullaccess) arn:aws:iam::347763580245:role/mssqldmsrole
+Create a DMS service 
+Create Replication Instance 
+Create Source
+Create Destination
+Create Task 
