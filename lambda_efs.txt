@@ -1,0 +1,35 @@
+Create Security Group (default)
+Create EFS File System
+Change Security Group for EFS (attach to above one created)
+Create Access Point 
+	posix userid : 1000
+	group id 	 : 1000
+	directory path /access
+
+	owner user id 1000
+	owner group id 1000
+	permissions 777
+
+
+Create IAM Role (efs-lambdaRole)
+
+	AWSLambdaExecute
+	AWSLambdaVPCAccessExecutionRole
+	AmazonElastiCFileSystemClientFullAccess
+
+
+Create Lambda and update VPC
+Configure EFS
+
+local mount path 
+/mnt/access
+
+Code
+
+print("before : " , os.listdir("/mnt/access"))
+with open ("/mnt/access/somefile.txt","w") as f:
+	f.write("hello from lambda")
+print("after : " , os.listdir("/mnt/access"))
+
+
+
