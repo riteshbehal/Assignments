@@ -1,0 +1,71 @@
+Create Lambda Function with below code 
+Create API Gateway 
+Create Post Method 
+Call post method from Postman  (While calling it from browser it should give you error)
+
+In last example, I have created request header validation and this example is for request body validation
+For body validation you have to create model 
+
+Go to Model
+
+Add Model Name 
+Add content type as "application/json"
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Employee Status",
+  "type": "object",
+  "properties": {
+        "status": { "type": "string", "enum": ["permanent", "contractors"]}
+        },
+        "required" : ["status"]
+}
+
+Create Model 
+Go Back to Post method 
+Method Request
+Change Request validator to "validate body"
+
+Add Request Body 
+add content type "application/json" and Choose model name "body validation" and save
+
+
+
+Lambda Code : 
+
+import json
+
+def lambda_handler(event, context):
+    
+    response =  {
+    "contractors": [
+        {
+        "On Site": 70,
+        "Total Contractors": 200
+        }
+        ],
+            
+    "permanent": [
+        {
+        "On Site": 20,
+        "Total Employees": 2000
+        }
+        ]
+    }
+  
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': response[event["status"]]
+    }
+
+
+Through postman we can test using post hit 
+
+{
+	"status": "permanent"
+}
+
+{
+	"status": "contractors"
+}
