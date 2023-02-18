@@ -1,0 +1,29 @@
+Create Linux Instance 
+curl http://169.254.169.254
+curl http://169.254.169.254/latest/
+curl http://169.254.169.254/latest/meta-data
+
+curl http://169.254.169.254/latest/user-data
+
+curl http://169.254.169.254/latest/meta-data/ami-id
+curl http://169.254.169.254/latest/meta-data/instance-id
+curl http://169.254.169.254/latest/meta-data/local-ipv4
+curl http://169.254.169.254/latest/meta-data/public-hostname
+
+curl http://169.254.169.254/latest/meta-data/iam/info
+
+curl http://169.254.169.254/latest/meta-data/iam/security-credentials
+
+Create Windows Instance 
+start http://169.254.169.254
+start http://169.254.169.254/latest/
+start http://169.254.169.254/latest/meta-data
+
+start http://169.254.169.254/latest/meta-data/ami-id
+start http://169.254.169.254/latest/meta-data/instance-id
+start http://169.254.169.254/latest/meta-data/local-ipv4
+start http://169.254.169.254/latest/meta-data/public-hostname
+
+start http://169.254.169.254/latest/meta-data/iam/info
+
+start http://169.254.169.254/latest/meta-data/iam/security-credentials
