@@ -1,0 +1,22 @@
+ec2-user
+sudo su
+yum install httpd -y
+service httpd status
+service httpd start
+
+
+
+Load Balancer 
+Change path to CD  /var/www/html/.
+
+vim index.html
+
+
+:wq for outside
+
+
+Instance MetaData
+UserData
+
+
+Placement Groups 
