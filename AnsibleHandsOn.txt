@@ -1,0 +1,459 @@
+==========================================
+Ansible 
+==========================================
+
+
+==========================================
+Ansible Installation 
+==========================================
+Login As a root user and create ansible user and provide sudo access in all Servers.
+
+Create the user ansible and set the password on all hosts:
+           sudo useradd ansible
+           sudo passwd ansible
+
+add in users above user "ansible" and 
+
+write visudo command
+
+ansible ALL=(ALL)       NOPASSWD: ALL
+
+
+==========================================
+Password less SSH (In both Host)
+
+Make the necessary changes  in sshd_config file /etc/ssh/sshd_config    
+           to enable password based authentication.
+
+         Un comment PasswordAuthentication yes
+         and comment  PasswordAuthentication no.
+         And save the file .
+==========================================
+
+vi /etc/ssh/sshd_config
+
+
+sudo service sshd restart 
+
+
+
+==========================================
+Install python in Ansible Remote
+==========================================
+
+sudo yum install python3 -y
+
+
+python3 --version
+
+==========================================
+Install EPEL
+==========================================
+
+sudo dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+sudo yum -y install ansible
+
+
+
+==========================================
+ssh-keygen in remote
+==========================================
+ssh-keygen 
+
+
+ssh-copy-id ansible@172.31.33.1
+
+
+ssh 'ansible@172.31.33.1'
+
+
+ssh-copy-id ansible@172.31.47.173
+ssh 'ansible@172.31.47.173'
+
+
+
+==========================================
+ssh-keygen in remote
+==========================================
+
+==========================================
+again login
+==========================================
+sudo su - ansible
+
+
+
+==========================================
+again login
+==========================================
+sudo su - ansible
+
+==========================================
+open file and do this entry 
+==========================================
+sudo vi /etc/ansible/hosts
+
+and add
+
+[appserver]
+172.31.33.1
+
+[webserver]
+172.31.47.173
+
+sudo ansible all -m ping
+
+sudo ansible appserver -m ping
+
+sudo ansible webserver -m ping
+
+==========================================
+ansible-doc (to see all the modules)
+==========================================
+ansible-doc -l
+
+
+
+
+
+
+
+
+Static Inventory
+
+Dynamic Inventory
+
+
+
+Push Based 
+Pull Based 
+
+
+
+
+
+Add one more machine with SSH
+
+
+
+
+
+print date
+
+
+
+
+install tree and git in  all groups and all servers
+
+
+
+
+
+==========================================
+Control Server Changes 
+==========================================
+
+    1  sudo /cd/home
+    2  cd /home/
+    3  sudo adduser
+    4  sudo adduser control
+    5  sudo passwd control
+
+switch to Ec2-user (using exit command)
+
+#sudo vim /etc/sudoers (Add Control User to File after root)
+control ALL=(ALL)       NOPASSWD: ALL
+
+#sudo vim /etc/ssh/sshd_config
+
+	PermitRootLogin yes
+	PasswordAuthetication yes
+
+#sudo service sshd restart 
+
+#sudo vim /etc/selinux/config
+selinux=permissive
+
+
+#switch to control user
+On Root (cd ~)
+
+ssh-keygen
+
+copy DNS name from (cat .ssh/id_rsa.pub)
+
+
+
+ssh-copy-id control@ip-172-31-39-117.ap-south-1.compute.internal (Run this command in Control server)
+
+ssh-copy-id remote@ip-172-31-35-35.ap-south-1.compute.internal (Run this command in Control server)
+
+
+
+
+==========================================
+Remote Server Changes 1
+==========================================
+
+    1  sudo /cd/home
+    2  cd /home/
+    3  sudo adduser
+    4  sudo adduser remote
+    5  sudo passwd remote
+
+sudo vim /etc/sudoers (Add Remote User to File after root)
+remote ALL=(ALL)       NOPASSWD: ALL
+
+
+sudo vim /etc/ssh/sshd_config
+
+PermitRootLogin yes
+PasswordAuthetication yes
+
+sudo service sshd restart 
+
+sudo vim /etc/selinux/config
+selinux=permissive
+
+#switch to remote user
+On Root (cd ~)
+
+ssh-keygen
+
+copy DNS name from (cat .ssh/id_rsa.pub)
+
+==========================================
+Remote Server Changes 2
+==========================================
+
+    1  sudo /cd/home
+    2  cd /home/
+    3  sudo adduser
+    4  sudo adduser remote
+    5  sudo passwd remote
+
+sudo vim /etc/sudoers (Add Remote User to File after root)
+remote ALL=(ALL)       NOPASSWD: ALL
+
+
+sudo vim /etc/ssh/sshd_config
+
+PermitRootLogin yes
+PasswordAuthetication yes
+
+sudo service sshd restart 
+
+sudo vim /etc/selinux/config
+selinux=permissive
+
+#switch to remote user
+On Root (cd ~)
+
+ssh-keygen
+
+copy DNS name from (cat .ssh/id_rsa.pub)
+
+==========================================
+Rough Notes
+==========================================
+
+ssh-keygen
+
+copy DNS name from (cat .ssh/id_rsa.pub)
+
+ssh-copy-id remote@ip-172-31-4-190.ap-south-1.compute.internal (Run this command in Control server)
+
+ssh-copy-id remote@ip-172-31-11-213.ap-south-1.compute.internal (Run this command in Control server)
+
+
+==========================================
+To connect 
+==========================================
+
+ssh remote@ip-172-31-4-190.ap-south-1.compute.internal
+
+ssh remote@ip-172-31-11-213.ap-south-1.compute.internal
+
+
+==========================================
+Pre-requisites for Ansible
+==========================================
+
+
+EPEL(Extra Package for Enterprise Linux)
+==================================
+# wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 
+# rpm -ivh epel-release-latest-7.noarch.rpm
+
+sudo yum install ansible -y
+
+cd /etc/ansible
+53  sudo vim hosts
+
+Enter remote host details
+
+[appserver]
+remote@172.31.4.190
+
+[webserver]
+remote@172.31.11.213
+
+
+
+   57  ansible all -m shell -a "mkdir /home/remote/dir1"
+   58  clear
+   59  ansible all -m shell -a "touch /home/remote/dir1/file1.txt"
+   60  clear
+   61  ansible all -m shell -a "sudo yum install java -y"
+   62  clear
+   63  ansible webservers -m shell -a "sudo yum install docker -y"
+
+
+
+Playbooks
+
+First enter in control/remote users respectively to machines
+
+Create playbook
+==================================
+vim p1copytasks.yml
+
+
+To check syntax
+==================================
+ansible-playbook --syntax p1copytask.yml
+
+
+To check syntax
+==================================
+ansible-playbook p1copytask.yml
+
+In case of error 
+==================================
+
+ansible webservers -m shell -a "sudo yum install libselinux-python -y"
+
+
+
+Working with Playbooks:
+======================
+# Playbook-1: Copy Tasks
+---
+ - hosts: all
+   vars:
+    welcome_msg: 'In 20 minutes i want to reboot servers'
+   tasks:
+   - name: copy_task
+     copy:
+      dest: /home/remote/dir1/file1.txt
+      content: "{{welcome_msg}}"
+
+Name of Script:
+==============
+p1copytask.yml
+
+Check Syntax for Playbook Script:
+=============================
+$ ansible-playbook --syntax p1copytask.yml
+
+Run Playbook Script:
+==================
+$ ansible-playbook  p1copytask.yml
+
+
+Issue:
+=====
+ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/control/p1copytasks.yml': line 3, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+--
+ - hosts: all
+        ^ here
+
+
+Issue:
+=====
+TASK [copy_task] ***********************************************************************************************************************************
+fatal: [remote@172.31.34.143]: FAILED! => {"changed": false, "checksum": "7bf568506a79ef088ee0ad2455d6ce0eaa295a52", "msg": "Aborting, target uses selinux but python bindings (libselinux-python) aren't installed!"}
+fatal: [remote@172.31.37.148]: FAILED! => {"changed": false, "checksum": "7bf568506a79ef088ee0ad2455d6ce0eaa295a52", "msg": "Aborting, target uses s elinux but python bindings (libselinux-python) aren't installed!"}
+
+Solution:
+========
+We need to install "libselinux-python" package in remote servers
+
+$ ansible webservers -m shell -a "sudo yum install libselinux-python -y"
+
+
+$ ansible-playbook p1copytasks.yml
+
+PLAY [all] ********************************************************************************************************************************
+
+TASK [Gathering Facts] ********************************************************************************************************************
+[WARNING]: Platform linux on host remote@172.31.34.143 is using the discovered Python interpreter at /usr/bin/python, but future installati
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+information.
+ok: [remote@172.31.34.143]
+[WARNING]: Platform linux on host remote@172.31.37.148 is using the discovered Python interpreter at /usr/bin/python, but future installati
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+information.
+ok: [remote@172.31.37.148]
+
+TASK [copy_task] **************************************************************************************************************************
+changed: [remote@172.31.37.148]
+changed: [remote@172.31.34.143]
+
+PLAY RECAP ********************************************************************************************************************************
+remote@172.31.34.143       : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+remote@172.31.37.148       : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+=====================================================================================================================================
+# Playbook-2: Creating new users
+---
+- name: New User is Created
+  hosts: all
+  become: true
+  tasks:
+    - name: User Gets Created
+      user:
+        name: user1
+        state: present
+
+
+
+
+=====================================================================================================================================
+# Playbook-3: Installation of Tomcat
+---
+- name: Installation of Apache-Tomcat
+  hosts: webservers
+  become: true
+  tasks:
+    - name: Install httpd package
+      yum: name=httpd state=latest
+    - name: Start httpd Service
+      service: name=httpd state=restarted
+
+Hands-on: Success
+=====================================================================================================================================
+# Playbook-4: Stop Apache-Tomcat
+---
+- name: Installation of Apache-Tomcat
+  hosts: all
+  become: true
+  tasks:
+    - name: Install httpd package
+      yum: name=httpd state=latest
+    - name: Start httpd Service
+      service: name=httpd state=stopped
+
+*************************************************************************************************************************************************
+
