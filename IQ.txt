@@ -1,0 +1,52 @@
+Lambda 
+
+How Lambda Works 
+How to resolve problem of cold start in lambda
+How to prevent your lambda function from DDOS Attack 
+Lambda Concurrency 
+How to call lambda function from another lambda function 
+How to handle multiple versions of lambda functions 
+How to access S3 from your lambda function 
+Step Function 
+What is the failover plan of your lambda functions 
+How to monitor and create alert if your lambda function is going down 
+
+SQS
+
+SQS vs SNS
+SQS vs Kinesis 
+Short pooling vs long pooling 
+How to configure DLQ in SQS
+How to copy data from one Queue to another queue (wihtout data loss)
+
+Difference between Ec2 vs Lambda
+AWS Well Architect Framework 
+What is golden image 
+How to share AMI across multiple AWS accounts
+How to control access on dynamodb tables
+How to restrict access to few items/rows in dynamoDB
+
+Difference between RDS vs DynamoDb vs Auora 
+
+TTL feature in DynamoDB
+What is Old Image vs New Image in Dynamodb Streams \
+
+How to setup DAX Cluster in dynamoDB
+How to invalidate a file in cloudfront before the TTL Time. (Invalidation)
+How to configure behaviors in cloudfront 
+
+What if I am giving two permissions with different policy, in one policy I am defining S3 as allowed and in another policy I am defining S3 as not allowed. So which one would be considered.
+
+
+
+AWS Cloud Pract
+AWS Developer 
+AWS Solution Architect 
+AWS Devops
+AWS Professional 
+
+GCP Architect 
+Azure
+
+
+  
