@@ -1,0 +1,146 @@
+=========================================
+Create Directory 
+=========================================
+mkdir TestDir1
+mkdir TestDir2
+mkdir TestDir3 
+
+=========================================
+Create Directory with Verbose
+=========================================
+mkdir -v TestDir4
+mkdir -v TestDir5
+mkdir -v TestDir6
+
+=========================================
+Create Directory with Sub Directories 
+=========================================
+mkdir -p Cloud/AWS/Ec2
+
+=========================================
+Install packages in Linux
+=========================================
+sudo yum install tree -y (without feedback)
+sudo yum install tree (with feedback)
+
+=========================================
+Remove installed packages in Linux
+=========================================
+sudo yum remove tree -y
+
+=========================================
+To convert user from Ec2 user to Root user 
+=========================================
+sudo su (Super user)
+
+
+=========================================
+list command
+=========================================
+ls (to show all files/directories)
+ls -a (to list all hidden files/directories too)
+
+(How to create hidden files in Linux)
+touch .file4.txt
+
+ls
+
+=========================================
+List command with Descending order and Ascending order
+=========================================
+ls -lt (Descending Order)
+
+ls - ltr (Ascending Order)
+
+
+=========================================
+Cat command to create 
+=========================================
+cat > samsung.text 
+Welcome to Samsung India
+Ctrl + C
+
+========================================
+Cat command to append data
+========================================
+
+cat >> samsung.text
+Welcome to Samsung India
+Ctrl + C
+
+=========================================
+echo command to display string 
+=========================================
+echo "Display this text"
+
+=========================================
+echo command to create new file 
+=========================================
+echo 'This cloud computing cohort is deliver by Ritesh' > hp1.txt
+
+========================================
+echo command to append data in existing file  
+========================================
+echo 'In Cloud Computing we are mostly going to focus on AWS and Devops tools' >>hp1.txt
+
+
+
+History 
+===============================================
+===============================================
+    1  yum install tree -y
+    2  tree
+    3  clear
+    4  clear
+    5  ls
+    6  touch file1.txt file2.txt file3.txt
+    7  ls
+    8  vim file1.txt
+    9  vim file2.txt
+   10  vim file3.txt
+   11  cat file1.txt
+   12  cat file2.txt
+   13  cat file3.txt
+   14  ls
+   15  ls -l
+   16  ls
+   17  ls -a
+   18  touch .file4.txt
+   19  ls
+   20  ls -a
+   21  clear
+   22  clear
+   23  ls -li
+   24  ls -lt
+   25  ls -ltr
+   26  clear
+   27  date
+   28  tree
+   29  cd Cloud/
+   30  cd AWS/
+   31  cd E
+   32  cd Ec2/
+   33  clear
+   34  cd ..
+   35  ls
+   36  rmdir Ec2
+   37  ls
+   38  mkdir EC2
+   39  cd EC2/
+   40  touch testfile1.txt testfile2.txt testfile3.txt
+   41  vim testfile1.txt
+   42  vim testfile2.txt
+   43  vim testfile3.txt
+   44  cd ..
+   45  rmdir EC2/
+   46  rm -rf EC2/
+   47  ls
+   48  history
+
+
+
+
+
+
+
+
