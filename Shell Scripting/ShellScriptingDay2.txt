@@ -1,0 +1,221 @@
+====================================================================================
+====================================================================================
+Working with Arrays 
+
+
+#! /bin/bash
+
+os=('ubuntu' 'windows' 'macos')
+
+echo "${os[@]}" To Display all records
+echo "${os[0]}" To Display specific Number 
+echo "${os[1]}"
+
+
+echo "${!os[@]}" To Display Position of Array 
+echo "${#os[@]}" To Display Length of Array 
+os[1]='android'
+echo "${os[@]}"
+
+To Remove from arrat 
+os=('ubuntu' 'windows' 'macos')
+unset os[2]
+
+
+====================================================================================
+====================================================================================
+Use a for Loop
+
+#! /bin/bash
+
+n=1
+
+while [ $n -le 10 ]
+do
+        echo "$n"
+        n=$(( n+1 ))
+done
+
+====================================================================================
+====================================================================================
+Sleep (Add a delay of few seconds)
+
+#! /bin/bash
+
+n=1
+
+while [ $n -le 10 ]
+do
+        echo "$n"
+        n=$(( n+1 ))
+sleep 10
+done
+
+
+====================================================================================
+====================================================================================
+read file using while loop
+
+#! /bin/bash
+
+while read p
+do
+        echo $p
+done < hello.sh
+
+
+Second Way
+=========
+
+#! /bin/bash
+
+cat hello.sh | while read p
+do
+        echo $p
+done
+
+
+====================================================================================
+====================================================================================
+Use FOR loop
+
+
+#! /bin/bash
+
+for i in 1 2 3 4 5
+do
+        echo $i
+done
+
+
+
+
+#! /bin/bash
+
+for (( i=0; i<5; i++ ))
+do
+        echo $i
+done
+
+
+====================================================================================
+====================================================================================
+Use FOR loop with Command
+
+#! /bin/bash
+
+for command in ls pwd date
+do
+        echo "------------ $command -----------"
+$command
+done
+
+
+====================================================================================
+====================================================================================
+SELECT loop with Command
+
+i#! /bin/bash
+
+select name in naina cnaina bnaina mnaina
+do
+	echo "$name selected"
+done 
+
+====================================================================================
+====================================================================================
+SELECT loop with Command with Case Statement
+
+i#! /bin/bash
+
+select name in naina cnaina bnaina mnaina
+do
+        case $name in
+        bnaina)
+                echo mark selected
+        ;;
+        naina)
+                echo mum selected
+        ;;
+        cnaina)
+                echo ght selected
+        ;;
+        *)
+        echo "Default Selected"
+esac
+done
+
+
+====================================================================================
+====================================================================================
+For Loop with Break Statement 
+
+#! /bin/bash
+
+for (( i=1; i<=10; i++ ))
+do
+        if [ $i -gt 5 ]
+        then
+         break
+        fi
+        echo "$i"
+done
+
+
+====================================================================================
+====================================================================================
+For Loop with Continue Statement 
+
+#! /bin/bash
+
+for (( i=1; i<=10; i++ ))
+do
+        if [ $i -eq 5 ]
+        then
+         continue
+        fi
+        echo "$i"
+done
+
+====================================================================================
+====================================================================================
+Functions Call Without Parameters 
+
+
+#! /bin/bash
+function test1()
+{
+echo "Test1 Called"
+}
+
+function test2()
+{
+echo "TEST 2 called"
+}
+
+test1
+test2
+
+
+====================================================================================
+====================================================================================
+Functions Call With Parameters 
+
+#! /bin/bash
+function test1()
+{
+count=$1
+echo "number is $1"
+}
+
+function test2()
+{
+echo "TEST 2 called"
+}
+
+test1 150
+test2
+
+
+
+
