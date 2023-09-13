@@ -1,0 +1,103 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Sample template to copy file from source S3 bucket to Destination S3 bucket using Lambda function
+
+Resources:
+  S3LambdaFunction:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: S3TriggerLambda
+      Code:
+        ZipFile: |
+
+            from __future__ import print_function
+            import boto3
+            import time, urllib
+            import json
+            s3 = boto3.client('s3')
+            def lambda_handler(event,context):
+                source_bucket = event['Records'][0]['s3']['bucket']['name']
+                object_key = event['Records'][0]['s3']['object']['key']
+                #source_bucket = 'samplesourcebucket-1'
+                #object_key = 'abc.txt'
+                target_bucket = 'sampledestinationbucket-1'
+                copy_source = {'Bucket': source_bucket, 'Key': object_key}
+                print('object_key : ', object_key)
+                print ("Source bucket : ", source_bucket)
+                print ("Target bucket : ", target_bucket)
+                try:
+                    s3.copy_object(Bucket=target_bucket, Key=object_key, CopySource=copy_source)
+                    print('success')
+                except Exception as err:
+                    print ("Error -"+str(err))
+      Handler: index.lambda_handler
+      Role:
+        Fn::GetAtt:
+          - s3lambdaexecutionrole
+          - Arn
+      Runtime: python3.9
+      Timeout: 5
+  s3lambdaexecutionrole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Policies:
+        - PolicyName: allowLogging
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:*
+                Resource: arn:aws:logs:*:*:*
+        - PolicyName: s3permission
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:*
+                  - s3-object-lambda:*
+                Resource: '*'
+              - Sid: VisualEditor0
+                Effect: Allow
+                Action:
+                  - logs:*
+                Resource: '*'
+
+  S3SourceBucket:
+    Type: 'AWS::S3::Bucket'
+    DependsOn:
+      - ProcessingLambdaPermission
+    Properties:
+      BucketName: sourcesamplemldchota
+      Properties:
+     	      Fn::GetAtt:
+          - S3LambdaFunction
+          - Arn
+  S3DestinationBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: sampledestinationbucket-1   
+  ProcessingLambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+     	      Fn::GetAtt:
+          - S3LambdaFunction
+          - Arn
+      Action: lambda:InvokeFunction
+      Principal: s3.amazonaws.com
+      SourceArn: arn:aws:s3:::samplesourcebucket
+  
+
+
+
+    #aws cloudformation create-stack --stack-name lambda-s3 --template-body file://s3-copy-s3.yaml  --capabilities CAPABILITY_NAMED_IAM
