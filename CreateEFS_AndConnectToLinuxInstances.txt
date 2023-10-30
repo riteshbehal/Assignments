@@ -1,19 +1,26 @@
-Create EFS 
-Add Security group of Ec2 instaces to EFS Network Security Group 
-
-Create 2 Ec2 Instances Linux
-Same Security groups for both instances 
-
+Create Elastic File System in AWS - Done 
+Create 2 ec2-linux instances and run following commands - done 
+Change security group of EFS to security group of Ec2 Instances - done 
+ 
 sudo su
-sudo yum install -y amazon-efs-utils
-sudo mkdir efs in both instances
+yum install -y amazon-efs-utils
+mkdir “efs” directory in both instances
+
+Add Security group of Ec2 instance to EFS Network Security Group
+Add NFS 2049 to same security group. 
+
+Mount step  (Copy step from EFS screen)
+echo "While I thought that I was learning how to live, 
+I have been learning how to die." > quote1.txt (cat test.txt and more test.txt to check file content)
 
 
-touch file1 file2 file3
+sudo mount -t abc -o tls fs-0361815ad2e9a4ce6:/ efs
 
 
 
-scannig files 
+Can I use EFS with On prem
+Can i use EFS across regions
+Can we use it between multiple VPC
 
 
 

@@ -1,9 +1,13 @@
-AmazonEC2RoleforSSM
-AmazonSSMManagedInstanceCore
-AmazonSSMFullAccess
+1.	Create a role with thse permissions 
 
-session-manager-plugin
+AmazonSSMManagedInstanceCore : - The policy for Amazon EC2 Role to enable AWS Systems Manager service core functionality.
+AmazonSSMFullAccess : Provides full access to Amazon SSM.
 
+2. Create ec2 instance with above role
 
-aws ssm start-session --target i-08e43a9974621b253 --document-name AWS-StartPortForwardingSession --parameters "localPortNumber=9090,portNumber=3389" --region ap-south-1
+3. Install AWS CLI 2
+
+4. Install session-manager-plugin
+
+5. aws ssm start-session --target i-01843dece3916f62e --document-name AWS-StartPortForwardingSession --parameters "localPortNumber=6677,portNumber=3389" --region ap-south-1
 

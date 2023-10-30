@@ -1,0 +1,501 @@
+*************************************************************************************************************************************************
+						******* Hands-on: Jenkins with AWS EC2 Linux VM ******* 
+*************************************************************************************************************************************************
+$ cat /etc/system-release
+Amazon Linux release 2 (Karoo)
+
+$ java -version
+openjdk version "1.8.0_342"
+OpenJDK Runtime Environment (build 1.8.0_342-b07)
+OpenJDK 64-Bit Server VM (build 25.342-b07, mixed mode)
+
+$ sudo yum remove java-1.8* -y
+
+
+Install Java-11:
+=================
+$ sudo yum install java-11* -y
+
+
+Download Jenkins:
+=================
+$ wget https://updates.jenkins.io/download/war/2.387/jenkins.war
+
+Installation Jenkins:
+=====================
+$ java -jar jenkins.war --httpPort=8080
+
+
+What is default port for jenkins?
+---
+Answer: 8080
+
+
+
+Please use the following password to proceed to installation:
+
+762458ed8696463bb1238ab763d94e4f
+
+b97fe191d1094d5b92a7e0ca276e3739
+
+adminuser-
+
+This may also be found at: /home/ec2-user/.jenkins/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+
+
+
+
+Access Jenkins GUI or Jenkins Console:
+=======================================
+http://Public-IP-Address:8080
+
+Ex:
+http://3.x.196.x:8080
+
+
+Public-IP-Address Command:
+============================
+$ curl ifconfig.co(Not working)
+
+
+* Check port 8080 in VM security group
+
+Jenkins Plugins:
+=================
+Jenkins plugins extends the functionality of jenkins
+
+
+* Completed installation of 86 plugins in 3 min 27 sec
+
+Plug-Ins
+=============
+Explain Manage Jenkins
+Installed Jenkins
+Available Jenkins
+
+Create Project 
+=============================
+
+Jenkins Build Project Status:
+=============================
+Not Built
+Success Build
+Failed Build
+
+*****************************************************************************************************************************
+
+Now Run Jenkins on different port 9090
+***************************************
+java -jar jenkins.war --httpPort=9090
+
+
+*********************************************************************
+Explain UI
+
+*********************************************************************
+Build Our First Job
+
+Create New Item
+Click on Free Style Project
+Add Build Step
+Add "Welcome to Jenkins"
+
+*********************************************************************
+Savings Credentials in Jenkins for GitHub
+
+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
+
+Go To Manage Jenkins
+Click on Manage Credentials
+Go To Stores Scoped To Jenkins
+Add Credentials
+Add GitHub Username and PAT 
+Installation of GIT is required
+
+*********************************************************************
+Jenkins Plugins
+And Show Docker Plugin Installation
+
+
+*********************************************************************
+FreeStyle Vs Pipeline Projects Difference (Therory + Practical)
+
+
+
+*********************************************************************
+
+Create Free Sytle Project
+Select Source Code Management 
+Enter repo URL as "https://github.com/riteshbehal/Lambda.git"
+Copy Git Repo
+Add Bulld Step - > Execute Shell 
+
+cat readme.MD
+
+*********************************************************************
+-------------------------------------------------------------------------------------
+
+Create Pipeline Project
+go to Pipeline
+Select "hello world" example in DDL
+Add first stage "Copy Git repo" (Create using Pipeline Syntax)
+
+select git in drop down list and enter GIT URL and click on Generate Pipeline Script
+select shell script in drop down list and add 'cat README.md' in the text.
+
+Add second stage to display the readme file.
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Copy Git repo') {
+            steps {
+                git 'https://github.com/riteshbehal/Lambda.git'
+            }
+        }
+         stage('Display read me file') {
+            steps {
+                sh 'cat README.md'
+            }
+        }
+    }
+}
+
+*********************************************************************
+-------------------------------------------------------------------------------------
+
+Show S3 To Console Output (
+
+Create Pipeline Project
+go to Pipeline
+Select "hello world" example in DDL
+Add first stage "" (Create using Pipeline Syntax)
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Showing S3 Data') {
+            steps {
+                sh 'aws s3 ls'
+            }
+        }
+    }
+}
+
+*********************************************************************
+-------------------------------------------------------------------------------------
+jenkins Post section 
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Showing S3 Data') {
+            steps {
+                sh 'aws s3 ls'
+            }
+        }
+	 }
+	  post {
+		always {
+			echo "success"
+		}
+    }
+}
+
+
+*********************************************************************
+-------------------------------------------------------------------------------------
+Build and Push container Image
+
+Create Pipeline
+Go to Pipeline script from SCM
+
+Repo URL: https://github.com/careerxclub/devopscourse
+Credentials Git One
+Branch : Main
+Update Script Path To "pushdockerimage/Jenkinsfile"
+
+Installation of Docker on Ec2 machine/jenkins server
+Configure GITHUB and Docker Credentials 
+
+(sudo has been added in command which was giving error in running)
+https://github.com/careerxclub/devopscourse
+
+
+*********************************************************************
+-------------------------------------------------------------------------------------
+Trigger One job from another 
+
+Create Two Pipelines Project 
+Second Project Name as "downstreamjob"
+Go To Pipeline Syntax of "downstreamjob"
+And build : Build a job 'downstreamjob'
+Add projectsToBuild "downstreamjob"
+Generate PipeLine Script 
+
+Sample :: - 
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Copy Git repo') {
+            steps {
+                git 'https://github.com/riteshbehal/Lambda.git'
+            }
+        }
+         stage('Display read me file') {
+            steps {
+                sh 'cat README.md'
+            }
+        }
+          stage('Trigger Another Job') {
+            steps {
+                build 'downstreamjob'
+            }
+        }
+    }
+}
+
+
+*********************************************************************
+-------------------------------------------------------------------------------------
+How to Send Parameters to Another Jenkins Job
+
+
+Create Two Pipelines Project 
+Second Project Name as "downstreamjob"
+Add "This project is parameterized" checkbox
+Add String Parameter
+Add value as BUILDNUMBER
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo "${BUILDNUMBER}"
+            }
+        }
+    }
+}
+
+Goto Pipeline Syntax of First Pipeline
+Sample Step : Build a job
+Parameters :- > BUILDNUMBER -> env.BUILD_NUMBER 
+click on generate Pipeline 
+
+and Make sure to remove '' from env.BUILD_NUMBER
+
+Sample : - 
+
+build job: 'downstreamjob', parameters: [string(name: 'BUILDNUMBER', value: env.BUILD_NUMBER)]
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Copy Git repo') {
+            steps {
+                git 'https://github.com/riteshbehal/Lambda.git'
+            }
+        }
+         stage('Display read me file') {
+            steps {
+                sh 'cat README.md'
+            }
+        }
+          stage('Trigger Another Job') {
+            steps {
+                build job: 'downstreamjob', parameters: [string(name: 'BUILDNUMBER', value: env.BUILD_NUMBER)]
+            }
+        }
+    }
+}
+
+*********************************************************************
+-------------------------------------------------------------------------------------
+How to see all Jenkins Environment Variables 
+
+http://13.127.242.109:8080/env-vars.html/
+
+
+*********************************************************************
+-------------------------------------------------------------------------------------
+How to Run ShellScript From Jenkins
+
+https://github.com/riteshbehal/devopscourse/tree/main
+https://github.com/riteshbehal/devopscourse/tree/main/scripts/sayhello.sh (script file)
+https://github.com/riteshbehal/devopscourse/blob/main/Jenkinsfile_script (jenkins file)
+
+Create a Pipeline Project
+Pipeline script from SCM
+Change brnach to main
+Change script path to "jenkinsfile_script"
+
+
+
+*********************************************************************
+----------------------------------------------------------------------
+
+How to Invoke Lambda Function using Jenkins
+
+ Step 1. Create Lambda Function 
+ Step 2. Create Ec2 machine with lambda execution Role
+ Step 3. Configure Ec2 Linux AWS CLI Credentials
+ Step 4. Create Pipeline (Pipeline Project and Select hello World Template and write Below Code)
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Invoke Lambda Function') {
+            steps {
+                sh 'aws lambda invoke --function-name MithiFun response.json'
+            }
+        }
+         stage('Print') {
+            steps {
+                sh 'cat response.json'
+            }
+        }
+    }
+}
+
+
+*********************************************************************
+----------------------------------------------------------------------
+
+Add Manual Approval in Jenkins (Ths example is continue to above one) 
+
+ Step 1. Create Lambda Function 
+ Step 2. Create Ec2 machine with lambda execution Role
+ Step 3. Configure Ec2 Linux AWS CLI Credentials
+ Step 4. Create Pipeline (Pipeline Project and Select hello World Template and write Below Code)
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Please enter Input') {
+            steps {
+                input message: 'Invoke Lambda ? (Click "Proceed" to continue)'
+            }
+        }
+        stage('Invoke Lambda Function') {
+            steps {
+                sh 'aws lambda invoke --function-name MithiFun response.json'
+            }
+        }
+         stage('Print') {
+            steps {
+                sh 'cat response.json'
+            }
+        }
+    }
+}
+
+
+*********************************************************************
+----------------------------------------------------------------------
+
+Multibranch Pipeline
+
+Create Multibranch Pipeline - > Under Branch Sources Select Git - > Select Credentials 
+
+https://github.com/careerxclub/multibranchtest-1 (This has 5 branches)
+
+It will scan after Save
+
+And then go Individually jobs to check the output 
+
+And show the scenario after adding one more branch...
+
+
+
+
+
+
+*********************************************************************
+----------------------------------------------------------------------
+
+Create S3 Bucket from CloudFormation Template From Jenkins
+
+(Manual)
+Create Pipeline - > Create SCM from Pipeline > GIT -> https://github.com/careerxclub/devopscourse.git
+Rename Branch to "Main"
+Script path will be as is
+Build Now
+
+
+(Automatic)
+Goto GitHub Project Repo and Click on settings - > Click on Webhooks - > 
+Go and Update payload URL - > URL OF jenkins web server + http://52.66.248.110:8080/github-webhook/ (like this ) +
+
+
+Application TYpe as "application/json" -> update workbook 
+
+Go to Jenkins Project 
+
+And Select "GitHub Hook Trigger for GITSCM polling" 
+
+And now do the change in jenkinsfile in github repo and it will automatically trigger build 
+
+
+
+*********************************************************************
+----------------------------------------------------------------------
+Installation and setup for terraform with jenkins
+
+Install terrrafom in Jenkins Agent
+
+	Go to https://developer.hashicorp.com/terraform/downloads and follow Amazon Linux Steps 
+
+
+Run "which command to get path from linux machine"
+
+Install terraform jenkins Plugins
+GotTo Dashboard -> Mange Jenkins -> global tools configuration 
+
+and uncheck install automatically and enter path copied from which command 
+
+
+Setup Path in Jenkins
+
+Create pipline with hello world
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                sh 'terraform version'
+            }
+        }
+    }
+}
+
+
+*********************************************************************
+----------------------------------------------------------------------
+Create VPC 
+
+Create Pipeline and Copy the content to Pipeline 
+
+https://github.com/riteshbehal/devopscourse/blob/main/terraform/vpc_Jenkinsfile (make sure it to Ritesh Repo)
+
+make sure about providr.tf (region)
+
+
