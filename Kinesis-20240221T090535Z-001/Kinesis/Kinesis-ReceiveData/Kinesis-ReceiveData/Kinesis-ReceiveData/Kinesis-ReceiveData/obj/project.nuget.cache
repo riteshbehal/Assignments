@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "wCAaYJ3iwti0/NwTd1E968gWj8ycyEKQfKF6/KDeSrNHgyKtzr51aEZwazvIb5KkdTsEIu66k+yF3sSSh9fR7A==",
+  "success": true,
+  "projectFilePath": "C:\\D-Data\\Trainings\\Repository\\Assignments\\Kinesis-20240221T090535Z-001\\Kinesis\\Kinesis-ReceiveData\\Kinesis-ReceiveData\\Kinesis-ReceiveData\\Kinesis-ReceiveData\\Kinesis-ReceiveData.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\awssdk.core\\3.7.202.17\\awssdk.core.3.7.202.17.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\awssdk.kinesis\\3.7.200.48\\awssdk.kinesis.3.7.200.48.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

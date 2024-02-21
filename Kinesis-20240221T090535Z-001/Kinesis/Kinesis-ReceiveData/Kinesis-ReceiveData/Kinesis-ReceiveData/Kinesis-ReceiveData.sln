@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinesis-ReceiveData", "Kinesis-ReceiveData\Kinesis-ReceiveData.csproj", "{97458F14-AB40-47DB-A32A-CCC49E2A0E36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97458F14-AB40-47DB-A32A-CCC49E2A0E36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97458F14-AB40-47DB-A32A-CCC49E2A0E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97458F14-AB40-47DB-A32A-CCC49E2A0E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97458F14-AB40-47DB-A32A-CCC49E2A0E36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76A59B8D-ECD4-4B4D-A721-2244FAECDDA9}
+	EndGlobalSection
+EndGlobal
