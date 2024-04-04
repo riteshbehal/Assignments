@@ -1,0 +1,180 @@
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.AssemblyReference.cache
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.AssemblyInfoInputs.cache
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.AssemblyInfo.cs
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.CoreCompileInputs.cache
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.MvcApplicationPartsAssemblyInfo.cache
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.RazorAssemblyInfo.cache
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.RazorAssemblyInfo.cs
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\appsettings.Development.json
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\appsettings.json
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.staticwebassets.runtime.json
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.exe
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.deps.json
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.runtimeconfig.json
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.dll
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\ref\sqlapp.dll
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.pdb
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\tmp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.build.json
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.development.json
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\bundle\sqlapp.styles.css
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\projectbundle\sqlapp.bundle.scp.css
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.CopyComplete
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.dll
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\ref\sqlapp.dll
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.pdb
+C:\tmp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.genruntimeconfig.cache
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\appsettings.Development.json
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\appsettings.json
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.staticwebassets.runtime.json
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.exe
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.deps.json
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.runtimeconfig.json
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.dll
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.pdb
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\tmp3\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.AssemblyReference.cache
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.AssemblyInfoInputs.cache
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.AssemblyInfo.cs
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.CoreCompileInputs.cache
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.MvcApplicationPartsAssemblyInfo.cache
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.RazorAssemblyInfo.cache
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.RazorAssemblyInfo.cs
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.sqlapp.Microsoft.AspNetCore.StaticWebAssets.props
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.build.sqlapp.props
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.sqlapp.props
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.sqlapp.props
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.pack.json
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.build.json
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.development.json
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\bundle\sqlapp.styles.css
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\projectbundle\sqlapp.bundle.scp.css
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.CopyComplete
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.dll
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\refint\sqlapp.dll
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.pdb
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.genruntimeconfig.cache
+C:\tmp3\sqlapp\sqlapp\obj\Debug\net6.0\ref\sqlapp.dll
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\appsettings.Development.json
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\appsettings.json
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.staticwebassets.runtime.json
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.exe
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.deps.json
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.runtimeconfig.json
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.dll
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.pdb
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\tmp4\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.AssemblyReference.cache
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.AssemblyInfoInputs.cache
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.AssemblyInfo.cs
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.CoreCompileInputs.cache
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.MvcApplicationPartsAssemblyInfo.cache
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.RazorAssemblyInfo.cache
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.RazorAssemblyInfo.cs
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.sqlapp.Microsoft.AspNetCore.StaticWebAssets.props
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.build.sqlapp.props
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.sqlapp.props
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.sqlapp.props
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.pack.json
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.build.json
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.development.json
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\bundle\sqlapp.styles.css
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\projectbundle\sqlapp.bundle.scp.css
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.CopyComplete
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.dll
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\refint\sqlapp.dll
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.pdb
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.genruntimeconfig.cache
+C:\tmp4\sqlapp\sqlapp\obj\Debug\net6.0\ref\sqlapp.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\appsettings.Development.json
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\appsettings.json
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.staticwebassets.runtime.json
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.exe
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.deps.json
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.runtimeconfig.json
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\ref\sqlapp.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.pdb
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.AssemblyReference.cache
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.AssemblyInfoInputs.cache
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.AssemblyInfo.cs
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.CoreCompileInputs.cache
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.MvcApplicationPartsAssemblyInfo.cache
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.RazorAssemblyInfo.cache
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.RazorAssemblyInfo.cs
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.build.json
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.development.json
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\bundle\sqlapp.styles.css
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\projectbundle\sqlapp.bundle.scp.css
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.CopyComplete
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\ref\sqlapp.dll
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.pdb
+C:\tmp3\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.genruntimeconfig.cache
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\appsettings.json
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.staticwebassets.runtime.json
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.exe
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.deps.json
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.runtimeconfig.json
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.dll
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\sqlapp.pdb
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.AssemblyReference.cache
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.AssemblyInfoInputs.cache
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.AssemblyInfo.cs
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.CoreCompileInputs.cache
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.RazorAssemblyInfo.cache
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.RazorAssemblyInfo.cs
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.sqlapp.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.build.sqlapp.props
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.sqlapp.props
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.sqlapp.props
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\bundle\sqlapp.styles.css
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\scopedcss\projectbundle\sqlapp.bundle.scp.css
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.csproj.CopyComplete
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.dll
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\refint\sqlapp.dll
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.pdb
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\sqlapp.genruntimeconfig.cache
+C:\Users\Ritesh Behal\Downloads\sqlapp\sqlapp\sqlapp\sqlapp\obj\Debug\net6.0\ref\sqlapp.dll

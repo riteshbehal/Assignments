@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "17cb32a0-85b9-46c6-bee1-84569337fc65": {
+      "ProjectGuid": "17cb32a0-85b9-46c6-bee1-84569337fc65",
+      "DisplayName": "sqlapp",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
