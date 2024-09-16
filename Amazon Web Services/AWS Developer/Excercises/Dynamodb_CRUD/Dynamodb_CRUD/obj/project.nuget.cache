@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "j5sMjtt/sHcxgsQYKjcSUaE/kT6/e7i29HhXO7xWuWTp7FE1C6qc2f0OEdsd23uLJK4eLCGWMTmgh6QLJA1DBA==",
+  "success": true,
+  "projectFilePath": "E:\\AWS Devloper Excercises\\Dynamodb_CRUD\\Dynamodb_CRUD\\Dynamodb_CRUD.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ritesh Behal\\.nuget\\packages\\awssdk.core\\3.7.400.10\\awssdk.core.3.7.400.10.nupkg.sha512",
+    "C:\\Users\\Ritesh Behal\\.nuget\\packages\\awssdk.dynamodbv2\\3.7.400.10\\awssdk.dynamodbv2.3.7.400.10.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Create_DynamoDB_Table", "Create_DynamoDB_Table\Create_DynamoDB_Table.csproj", "{607804F6-5BE6-4F13-9035-76D5F5B718E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{607804F6-5BE6-4F13-9035-76D5F5B718E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607804F6-5BE6-4F13-9035-76D5F5B718E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607804F6-5BE6-4F13-9035-76D5F5B718E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607804F6-5BE6-4F13-9035-76D5F5B718E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {657A38A4-50A3-4AEE-B988-ADB6FEA4DDD1}
+	EndGlobalSection
+EndGlobal

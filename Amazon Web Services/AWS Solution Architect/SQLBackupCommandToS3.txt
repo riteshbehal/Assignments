@@ -1,0 +1,5 @@
+EXEC [MSDB].[DBO].[rds_backup_database]
+@source_db_name ='TestDatabase',
+@s3_arn_to_backup_to= N'arn:aws:s3:::devdigifreeks/value45.bak'
+
+EXEC [MSDB].[DBO].[rds_task_status]

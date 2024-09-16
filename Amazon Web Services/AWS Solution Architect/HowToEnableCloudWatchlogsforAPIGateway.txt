@@ -1,0 +1,7 @@
+1.	Create a Role with API Gateway 
+2.	Copy the ARN of role
+3.	Go To settings of API Gateway settings and paste the role ARN in console. 
+4. 	Go to resources and click on resources 
+5.	Go To stages
+5.	Click on to Logs/Tracing 
+

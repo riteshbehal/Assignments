@@ -1,0 +1,65 @@
+Centralized Logging Policy
+=======================================================================================================================
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AWSCloudTrailAclCheck20131101",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "cloudtrail.amazonaws.com"
+      },
+      "Action": "s3:GetBucketAcl",
+      "Resource": "arn:aws:s3:::kplabs-central-log-cloudtrail"
+    },
+    {
+      "Sid": "AWSCloudTrailWrite20131101",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "cloudtrail.amazonaws.com"
+      },
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::kplabs-central-log-cloudtrail/*",
+      "Condition": { 
+        "StringEquals": { 
+          "s3:x-amz-acl": "bucket-owner-full-control" 
+        }
+      }
+    }
+  ]
+}
+
+========================================================================================================================
+
+Conditional S3 Bucket Policy for CloudTrail
+========================================================================================================================
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "AWSCloudTrailAclCheck20131101",
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "cloudtrail.amazonaws.com"
+        },
+        "Action": "s3:GetBucketAcl",
+        "Resource": "arn:aws:s3:::kplabs-central-logs-cloudtrail"
+      },
+      {
+        "Sid": "AWSCloudTrailWrite20131101",
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "cloudtrail.amazonaws.com"
+        },
+        "Action": "s3:PutObject",
+        "Resource": "arn:aws:s3:::kplabs-central-logs-cloudtrail/*",
+        "Condition": { 
+          "StringEquals": { 
+            "aws:SourceArn": "arn:aws:cloudtrail:ap-southeast-1:693331494763:trail/demo-trail",
+            "s3:x-amz-acl": "bucket-owner-full-control"
+          }
+        }
+      }
+    ]
+  }

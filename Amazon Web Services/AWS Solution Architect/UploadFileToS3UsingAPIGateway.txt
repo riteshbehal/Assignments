@@ -1,0 +1,40 @@
+1.	Create a S3 Bucket
+2.	Create a Lambda Function 
+
+import json
+import base64
+import boto3
+
+
+def lambda_handler(event, context):
+    s3 = boto3.client("s3")
+
+    # retrieving data from event
+    get_file_content = event["content"]
+
+    # decoding data
+    decode_content = base64.b64decode(get_file_content)
+
+    # uploading file to S3 bucket
+    s3_upload = s3.put_object(Bucket="firebasemumbai", Key="file.pdf", Body=decode_content)
+
+    return {"statusCode": 200, "body": json.dumps("Thanks for using!")}
+
+3.	Add a permission to lambda function for S3
+
+4.	Create a API Gateway / Resources and Methods 
+
+5.	Update Mappings template to "When there are no templates defined " in Integration Request and add 
+content-type as "application/pdf"
+
+Add this to Generate template
+
+{
+    "content": "$input.body"
+}
+
+6.	Go To Settings and Update Binary Media Types as "application/pdf"
+
+7.	Deploy your API
+
+8.	Test your postman and send binary data through postman

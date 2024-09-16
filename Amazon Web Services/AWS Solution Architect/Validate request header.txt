@@ -1,0 +1,10 @@
+Create Lambda Function
+Create API Gateway 
+Create Post Method 
+Call post method from Postman  (While calling it from browser it should give you error)
+
+Now go to Integration Request of API Gateway 
+Go To Mappings Templates 
+
+Change the settings for request body passthrough to "Never"
+Add content type as "application/json" or whatever you want

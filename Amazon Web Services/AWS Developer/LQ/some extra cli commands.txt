@@ -1,0 +1,166 @@
+============================================================================================================================================================================================================================================
+============================================================================================================================================================================================================================================
+S3 COMMANDS
+
+# know your AWS version
+aws --version
+
+# know your AWS region
+aws configure get region
+
+# list existing S3 buckets
+aws s3 ls
+
+# get S3 bucket region
+aws configure get region
+
+# copy any file from your laptop to S3 bucket
+aws s3 cp myfile.txt s3://1demobucket1/myfile.txt
+
+# download any file from s3 bucket to your laptop
+aws s3 cp s3://1demobucket1/myfile.txt myfile.txt
+
+# remove a file from S3 bucket
+aws s3 rm s3://1demobucket1/myfile.txt
+
+# making/creating a bucket using cli
+aws s3 mb s3://givebucketname --region ap-south-1
+
+# other command to list S3 buckets
+aws s3api list-buckets --query 'Buckets[].Name'
+
+# know the bucket location
+aws s3api get-bucket-location --bucket yourbucketname
+
+============================================================================================================================================================================================================================================
+============================================================================================================================================================================================================================================
+EC2 COMMANDS
+
+# list all keypairs
+aws ec2 describe-key-pairs
+
+# create a key pair
+aws ec2 create-key-pair --key-name dramakey --output text
+
+# list all security groups
+aws ec2 describe-security-groups
+
+# list all instances (running, and not running)
+aws ec2 describe-instances
+
+# list all instances running
+aws ec2 describe-instances --filters Name=instance-state-name,Values=running          
+
+============================================================================================================================================================================================================================================
+============================================================================================================================================================================================================================================
+CLI COMMANDS FOR MULTIPLE ACCOUNTS
+
+# to list all profiles
+aws configure list-profiles
+
+# to configure multiple accounts 
+aws configure --profile account
+
+# to describe instance in a particular account
+aws ec2 describe-instances --profile=account
+
+# to set a particular account as your default profile
+set AWS_DEFAULT_PROFILE=account1
+
+============================================================================================================================================================================================================================================
+============================================================================================================================================================================================================================================
+UPDATE BUCKET VERSIONING
+
+# check bucket versioning
+aws s3api get-bucket-versioning --bucket newdemobucket1233211212 --generate-cli-skeleton output
+
+#enable bucket versioning
+aws s3api put-bucket-versioning --bucket newdemobucket1233211212 --versioning-configuration Status=Enabled 
+
+# check status
+s3api get-bucket-versioning --bucket newdemobucket1233211212
+
+# Retrieve object metadata: HeadObject
+aws s3api head-object --bucket notes-bucket --key index.html
+
+# list table of dynamodb
+aws dynamodb list-tables
+
+# create table in dynamodb
+aws dynamodb create-table --cli-input-json file://notestable.json --region us-west-2
+
+# creating an item in dynamodb table 
+aws dynamodb put-item
+    --table-name Notes
+    --item \
+'{"UserId":{"S":"StudentD"}, "NoteId":{"N":"42"}, "Notes":{"S":"Test note"}}'
+
+# reading item from dynamodb table
+aws dynamodb get-item
+    --table-name Notes
+    --key '{"UserId": {"S": "StudentA"}, "NoteId": {"N": "11"}}'
+# query data from dynamodb table 
+aws dynamodb query
+    --table-name Notes 
+    --key-condition-expression "UserId = :userid"
+    --expression-attribute-values '{":userid":{"S":"StudentA"}}'
+
+# scanning data in dynamodb 
+aws dynamodb scan 
+     --table-name Notes  
+     --filter-expression “UserId = :userid" 
+     --expression-attribute-values ‘{":userid":{"S":"StudentA"}}’
+# deleting an item from dynamodb table
+aws dynamodb delete-item
+    --table-name Notes
+    --key '{"UserId": {"S": "StudentB"}, "NoteId": {"N": "23"}}'
+
+# creating lambda function
+aws lambda create-function --function-name your-function --handler app.lambda_handler --runtime python3.8 --role arn:aws:iam::533267094905:role/lambdarole --zip-file fileb://C:/tools/file.zip 
+
+# updating environment variable in lambda function
+aws lambda update-function-configuration --function-name my-function --environment "Variables={BUCKET=my-bucket,KEY=file.txt}" 
+
+# Using the CLI to invoke a REST API
+aws apigateway test-invoke-method --rest-api-id 81jpgj2f0j --resource-id Prq5yc5aq6 --http-method GET --path-with-query-string '/'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

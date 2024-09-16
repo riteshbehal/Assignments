@@ -1,0 +1,226 @@
+===========================================================================================
+===========================================================================================
+
+Commands to Test How much shells are available 
+
+cat /etc/shells
+which sh
+which bash
+which tcsh
+
+===========================================================================================
+===========================================================================================
+
+Create a basic shell scriptig file 
+
+touch hello.sh
+vi hello.sh
+
+Content 
+"
+#! /bin/bash
+echo "hello world there"
+"
+
+./hello.sh
+chmod +x hello.sh
+./hello.sh
+history
+
+===========================================================================================
+===========================================================================================
+Script to Show Echo Static and then HosName
+
+
+#! /bin/bash
+echo "hello world there"
+echo $HOSTNAME
+echo $BASH
+echo $PWD
+
+
+===========================================================================================
+===========================================================================================
+Script to Show System variables and user variables 
+
+
+#! /bin/bash
+echo "hello world there"
+name=Mark
+echo the name is $name
+
+
+===========================================================================================
+===========================================================================================
+To enter a name through Read (User Input)
+
+echo "Please enter the name"
+read name
+echo "The name you entered is $name"
+
+
+===========================================================================================
+===========================================================================================
+To enter a name through Read (Multiple Names)
+
+echo "Please enter the names"
+read name1 name2 name3 name4
+echo "The name you entered is $name1, $name2, $name3, $name4"
+
+
+Please enter the names
+Ritesh Naina Meethi Tarun
+
+
+===========================================================================================
+===========================================================================================
+To enter a value through Read (Same Line -p)
+
+echo "Please enter the names"
+read -p 'username : ' user_var
+echo "username : $user_var"
+
+===========================================================================================
+===========================================================================================
+To enter a hidden/silent values through Read (Same Line -p)
+read -sp 'password : ' password_var
+echo "password : $password_var"
+
+
+===========================================================================================
+===========================================================================================
+Arrays in Shell
+
+read -a names
+echo "Names : ${names[0]}, ${names[1]}"
+
+===========================================================================================
+===========================================================================================
+read without Variables 
+
+read
+echo $REPLY
+
+===========================================================================================
+===========================================================================================
+Send Arguments
+
+
+#! /bin/bash
+echo $1 $2 $3
+
+args=("$@")
+
+echo ${args[1]} ${args[2]} ${args[3]}
+
+
+===========================================================================================
+===========================================================================================
+If else 
+
+Number Comparisons:
+
+-eq - is equal to - if [ "$a" -eq "$b" ]
+-ne - is not equal to - if [ "$a" -ne "$b" ]
+-gt - is greater than - if [ "$a" -gt "$b" ]
+-ge - is greater than or equal to - if [ "$a" -ge "$b" ]
+-lt - is less than - if [ "$a" -lt "$b" ]
+-le - is less than or equal to - if [ "$a" -le "$b" ]
+< - is less than - (("$a" < "$b"))
+<= - is less than or equal to - (("$a" <= "$b"))
+> - is greater than - (("$a" > "$b"))
+>= - is greater than or equal to - (("$a" >= "$b"))
+
+String Comparisons : 
+
+= - is equal to - if [ "$a" = "$b" ]
+== - is equal to - if [ "$a" == "$b" ]
+!= - is not equal to - if [ "$a" != "$b" ]
+< - is less than, in ASCII alphabetical order - if [[ "$a" < "$b" ]]
+> - is greater than, in ASCII alphabetical order - if [[ "$a" > "$b" ]]
+-z - string is null, that is, has zero length
+
+
+
+#! /bin/bash
+
+count=9
+
+if [ $count -ne 9 ]
+then
+ echo "ct"
+fi
+ echo "wrong"
+
+
+FOR STRING
+
+
+
+#! /bin/bash
+
+name="ritesh"
+
+if [ $name = "ritesh1" ]
+then
+ echo "ct"
+else 
+ echo "BB"
+fi
+ echo "wrong"
+
+
+
+========================================================================================
+========================================================================================
+File is available or not to check 
+
+
+
+#! /bin/bash
+
+name="ritesh"
+read file_name
+
+if [ -e $file_name ]
+then
+ echo "found"
+else
+ echo "not found"
+fi
+
+========================================================================================
+========================================================================================
+Directory is available or not to check 
+
+
+name="ritesh"
+read file_name
+
+if [ -d $file_name ]
+then
+ echo "found"
+else
+ echo "not found"
+fi
+
+
+========================================================================================
+========================================================================================
+Case Statement
+
+
+#! /bin/bash
+
+vehicle=$1
+
+case $vehicle in
+        "car" )
+                echo "first" ;;
+        "van" )
+                echo "second" ;;
+        * )
+                echo "default" ;;
+esac
+
+

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Dghgd5mpEiYOYqvbtg8ecqNOAYDPmj7IKXuiXt5NoiiDX9hZjAi+iInq7jaV/8mZ+Z2GweS1EoZbzSrAhK8tDw==",
+  "success": true,
+  "projectFilePath": "E:\\AWS Devloper Excercises\\PushDatatoSQS1\\PushDatatoSQS1\\PushDatatoSQS1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ritesh Behal\\.nuget\\packages\\awssdk.core\\3.7.400.11\\awssdk.core.3.7.400.11.nupkg.sha512",
+    "C:\\Users\\Ritesh Behal\\.nuget\\packages\\awssdk.sqs\\3.7.400.11\\awssdk.sqs.3.7.400.11.nupkg.sha512"
+  ],
+  "logs": []
+}

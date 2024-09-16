@@ -1,0 +1,21 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Template to configure a sample queue",
+    
+    "Resources": {
+        
+        "cflambda":{
+            "Type": "AWS::Lambda::Function",
+           "Properties": {
+              "FunctionName": "EOD_files_lambda",
+              "Handler": "index.lambda_handler",
+              "Role": "arn:aws:iam::722123124527:role/TestLambdaRole",
+              "Code": {
+                "ZipFile":"def lambda_handler(event, context):\n  message = \"Hello Lambda World!\"\n  return message\n"},
+              "Runtime": "python3.7",
+              "MemorySize": 128,
+              "Timeout":30
+            }
+        } 
+    }
+}

@@ -1,0 +1,36 @@
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\Create_DynamoDB_Table.exe
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\Create_DynamoDB_Table.deps.json
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\Create_DynamoDB_Table.runtimeconfig.json
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\Create_DynamoDB_Table.dll
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\Create_DynamoDB_Table.pdb
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\AWSSDK.DynamoDBv2.dll
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.csproj.AssemblyReference.cache
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.AssemblyInfoInputs.cache
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.AssemblyInfo.cs
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.csproj.CoreCompileInputs.cache
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.csproj.CopyComplete
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.dll
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\refint\Create_DynamoDB_Table.dll
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.pdb
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.genruntimeconfig.cache
+C:\Users\Ritesh Behal\source\repos\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\ref\Create_DynamoDB_Table.dll
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\Create_DynamoDB_Table.exe
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\Create_DynamoDB_Table.deps.json
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\Create_DynamoDB_Table.runtimeconfig.json
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\Create_DynamoDB_Table.dll
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\Create_DynamoDB_Table.pdb
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\AWSSDK.Core.dll
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\bin\Debug\net6.0\AWSSDK.DynamoDBv2.dll
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.csproj.AssemblyReference.cache
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.GeneratedMSBuildEditorConfig.editorconfig
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.AssemblyInfoInputs.cache
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.AssemblyInfo.cs
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.csproj.CoreCompileInputs.cache
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.csproj.CopyComplete
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.dll
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\refint\Create_DynamoDB_Table.dll
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.pdb
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\Create_DynamoDB_Table.genruntimeconfig.cache
+E:\AWS Devloper Excercises\Create_DynamoDB_Table\Create_DynamoDB_Table\obj\Debug\net6.0\ref\Create_DynamoDB_Table.dll

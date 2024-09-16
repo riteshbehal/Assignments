@@ -1,0 +1,30 @@
+Create a Memcached instance
+
+Create an Ec2 instance 
+Open 11211 port in security group of memcached instance
+
+yum -y install telnet
+
+telnet demo-memcached.roaqvr.cfg.aps1.cache.amazonaws.com 11211
+
+set fname 0 0 9
+cloudtest
+
+STORED indicates success.
+ERROR indicates incorrect syntax or error while saving data
+
+get fname 0 0 9
+
+
+set mainrow 0 900 9
+memcached
+STORED
+get mainrow
+VALUE mainrow 0 9
+Memcached
+END
+
+
+
+
+

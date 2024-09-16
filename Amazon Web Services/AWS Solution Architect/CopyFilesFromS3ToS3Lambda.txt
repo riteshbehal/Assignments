@@ -1,0 +1,22 @@
+from __future__ import print_function
+import boto3
+import time, urllib
+import json
+
+s3 = boto3.client('s3')
+
+def lambda_handler(event, context):
+    # TODO implement
+    source_bucket = event['Records'][0]['s3']['bucket']['name']
+    object_key = urllib.parse.quote_plus((event['Records'][0]['s3']['object']['key']))
+    target_bucket = 'smytstbcktljanalas'
+    copy_source = {'Bucket': source_bucket, 'Key': object_key}
+  
+    try:
+        print ("Using waiter to waiting for object to persist through s3 service")
+        
+        s3.copy_object(Bucket=target_bucket, Key=object_key, CopySource=copy_source)
+        
+    except Exception as err:
+        print ("Error -"+str(err))
+        return e

@@ -1,0 +1,45 @@
+Open your AWS Console and create a Lambda function with the name dictate-function.
+Open the lab4 folder in VS Code and then open your terminal, after you need to run the below commands. 
+===================================================================================================================================================================================================================
+
+$apiBucket='APIBUCKETNAME'
+
+$notesTable='Notes'
+
+aws lambda update-function-configuration \
+--function-name dictate-function \
+--environment Variables="{MP3_BUCKET_NAME=$apiBucket, TABLE_NAME=$notesTable}"
+
+===================================================================================================================================================================================================================
+
+Now run the below commands to upload code to your lambda function. 
+
+===================================================================================================================================================================================================================
+
+Compress-Archive -Path .\app.py -DestinationPath .\dictate-function.zip
+
+
+aws lambda update-function-code --function-name dictate-function --zip-file fileb://dictate-function.zip
+
+
+aws lambda update-function-configuration --function-name dictate-function --handler app.lambda_handler
+
+===================================================================================================================================================================================================================
+
+Now create an event.json file inside the dictate function using the code below. 
+
+{
+  "UserId": "newbie",
+  "NoteId": "2",
+  "VoiceId": "Joey"
+}
+
+===================================================================================================================================================================================================================
+
+Then in the end run the below command to invoke your lambda function. After execution a response file will be created and in that file you will find a link. 
+you can also use the same event.json statement to test your lambda function. 
+
+===================================================================================================================================================================================================================
+
+aws lambda invoke --function-name dictate-function --payload fileb://event.json response.txt
+

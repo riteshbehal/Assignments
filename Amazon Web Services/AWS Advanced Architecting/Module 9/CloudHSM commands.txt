@@ -1,0 +1,43 @@
+Cluster-ID: cluster-re7ve5ojkam
+Username: hsmuser
+Password: newPassword1
+Access Key: AKIA4ZIQ7TEGBPHEIFL6
+Secret Access Key: 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
+Pass Phrase: hsmuser
+
+===============================================================================================================================
+aws cloudhsmv2 describe-clusters --filters clusterIds=cluster-re7ve5ojkam \
+                                   --output text \
+                                   --query 'Clusters[].Certificates.ClusterCsr' \
+                                   > cluster-re7ve5ojkam_ClusterCsr.csr
+===============================================================================================================================
+openssl genrsa -aes256 -out customerCA.key 2048
+===============================================================================================================================
+openssl req -new -x509 -days 3652 -key customerCA.key -out customerCA.crt
+===============================================================================================================================
+openssl x509 -req -days 3652 -in cluster-re7ve5ojkam_ClusterCsr.csr \
+                              -CA customerCA.crt \
+                              -CAkey customerCA.key \
+                              -CAcreateserial \
+                              -out cluster-re7ve5ojkam_CustomerHsmCertificate.crt
+===============================================================================================================================
+aws cloudhsmv2 initialize-cluster --cluster-id cluster-re7ve5ojkam \
+                                    --signed-cert file://cluster-re7ve5ojkam_CustomerHsmCertificate.crt \
+                                    --trust-anchor file://customerCA.crt
+===============================================================================================================================
+wget https://s3.amazonaws.com/cloudhsmv2-software/CloudHsmClient/EL6/cloudhsm-client-latest.el6.x86_64.rpm
+===============================================================================================================================
+sudo yum install -y ./cloudhsm-client-latest.el6.x86_64.rpm
+===============================================================================================================================
+sudo su
+cp customerCA.crt /opt/cloudhsm/etc/customerCA.crt
+===============================================================================================================================
+sudo /opt/cloudhsm/bin/configure -a 172.31.22.173
+===============================================================================================================================
+/opt/cloudhsm/bin/cloudhsm_mgmt_util /opt/cloudhsm/etc/cloudhsm_mgmt_util.cfg
+===============================================================================================================================
+loginHSM PRECO admin password
+listUsers
+===============================================================================================================================
+changePswd PRECO admin NewPassword
+===============================================================================================================================

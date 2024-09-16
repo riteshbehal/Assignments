@@ -1,0 +1,31 @@
+Create a Redis Server 
+
+Creating a linux based ec2 instance 
+
+sudo yum install gcc
+wget http://download.redis.io/redis-stable.tar.gz
+tar -xzvf redis-stable.tar.gz
+cd redis-stable
+make
+
+Open Port 6379 in security group 
+
+src/redis-cli -c -h cf-redis-demo.bbg5ci.clustercfg.aps1.cache.amazonaws.com -p 6379
+
+cf-redis-demo.bbg5ci.clustercfg.aps1.cache.amazonaws.com:6379
+
+demo-redis.jyzxf6.clustercfg.aps1.cache.amazonaws.com:6379
+
+src/redis-cli -c -h demo-redis.roaqvr.clustercfg.aps1.cache.amazonaws.com -p 6379
+
+src/redis-cli -c -h redis-democluster.jyzxf6.clustercfg.aps1.cache.amazonaws.com -p 6379
+
+
+demo-redis.roaqvr.clustercfg.aps1.cache.amazonaws.com:6379
+
+SET Name "Test"
+Get Name
+
+
+
+

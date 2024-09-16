@@ -1,0 +1,49 @@
+Create a user with CodeCommit/CodePipeline Full Access
+Create security credentials for above user
+
+Create service role for Code Deploy - RetailCodeDeploy
+Create service role for Ec2 to download from s3 - RetailEc2ToS3Read
+DownLoad and Install Git 
+Configure Git on local 
+
+Create a Repo in CodeCommit
+Clone the Repo
+git clone ""
+
+Create Ec2 machine (linux with below command)
+Assign RetailEc2ToS3Read to this instance
+Assign Tags to Machine (Same Tag will be used by CodeDeploy)
+
+Create Application in CodeDeploy
+Create New Application 
+Create Deployment Groups 
+
+Create Pipeline
+
+#!/bin/bash
+sudo yum -y update
+sudo yum -y install ruby
+sudo yum -y install wget
+cd /home/ec2-user
+wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
+sudo chmod +x ./install
+sudo ./install auto
+sudo yum install -y python-pip
+sudo pip install awscli
+
+
+
+
+AWS SWF
+Cognito 
+Auto Scaling 
+Q & A (Interview questions on developer level)
+ECS/Fargate 
+Terraform 
+Kinesis Scenario 
+
+
+
+
+
+

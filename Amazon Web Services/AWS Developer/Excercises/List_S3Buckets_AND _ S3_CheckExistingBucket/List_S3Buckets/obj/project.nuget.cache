@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2iv6gu7IQhY9iEaOsq1EK4Z3kGLnPm1XwEkaxqCs8ywjO0p6P5zhXn3tqzZrWsjuWJjdz04BIN3uOF6IwqUjyA==",
+  "success": true,
+  "projectFilePath": "E:\\AWS Devloper Excercises\\List_S3Buckets_AND _ S3_CheckExistingBucket\\List_S3Buckets\\List_S3Buckets.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ritesh Behal\\.nuget\\packages\\awssdk.core\\3.7.400.9\\awssdk.core.3.7.400.9.nupkg.sha512",
+    "C:\\Users\\Ritesh Behal\\.nuget\\packages\\awssdk.s3\\3.7.402\\awssdk.s3.3.7.402.nupkg.sha512"
+  ],
+  "logs": []
+}

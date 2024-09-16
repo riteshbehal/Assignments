@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "YipqCCoUmkU3r59McrEJ0nCeVnRm+I4KuBEfuVNrW4PYM4XK8lJiGKY/HutFi+sOiaCGnDzANzZ2DUZ7eFuSgw==",
+  "success": true,
+  "projectFilePath": "E:\\AWS Devloper Excercises\\Create_DynamoDB_Table\\Create_DynamoDB_Table\\Create_DynamoDB_Table.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ritesh Behal\\.nuget\\packages\\awssdk.core\\3.7.400.9\\awssdk.core.3.7.400.9.nupkg.sha512",
+    "C:\\Users\\Ritesh Behal\\.nuget\\packages\\awssdk.dynamodbv2\\3.7.400.9\\awssdk.dynamodbv2.3.7.400.9.nupkg.sha512"
+  ],
+  "logs": []
+}

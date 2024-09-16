@@ -1,0 +1,131 @@
+https://scim.us-east-1.amazonaws.com/f3v8bd4cee7-7841-40a1-9546-6f921bfa9e3b/scim/v2/
+
+b5f22ac1-d69f-450d-8c9e-632ea0ab3e0c:d3c7509f-ed7b-468f-ba09-90a135e5af2f:8yrV2MqSlmXmmHTB1o993MogF5tg+vaLo0/ntMdEuHv4NIrQv2pEHAXLl8vyk/+CWp69sn7xx+fKOFuR3LIhRYVehj0C/xcGm+dvLln0jWZpTbJMQX/Of6NrY/QrW+RtBZggPGGLFtelN2nHko+/kDQf4xqVNNbVH04=:tfjdOYLztxSmIJjyQfr3J2H5vH7sj3+7TwreSvzrNiYaQF/bgz3feJGgb5hQv3Dj5Hs84vK+Lj3nn5AovoarqdutuDe7DlTqCr+jMWZAgodCPkjnVkFBdspMG1FwlCAEt+NEhIR5SFcDhCxqHMNDdtMe212zWBP6t2FQ+FEl2RIxvykEtWKlmvNkdXBWxL6Kxl3fHZN73YwV+QMTaAnFW4hw4EaJRYyUSu4IyY2hgq6lfMJmR8/yAUmUuQNtKBUJHs9QtoprhTyXZFUBGWXCe8OZPtd5TBRkyuS7cl0vrEC6YNzizv1wW+yZKdso+sLvZYinnBXCnCSqpDzr0lJpNA==
+
+
+
+Steps 
+	1.	Generate a file in Azure : Done
+	2.	Generate a file in AWS: Done
+	3.	Upload file to azure : Done
+	4.	upload file to AWS : Done
+	5.	Enable Automatic Provisioning in AWS : Done
+	6.	Mappings
+	7.	Create Users/Groups in Azure
+	8.	Do Automatic Provisioing
+	9.	Create Permission Sets 
+	10. 	Test SSO with AWS
+
+## Azure
+
+Create a account in Azure Portal 
+Create new application in enterprise applications in Azure Portal
+Create your own applications in Azure GD Gallaery (TeslaApps)
+Go to Single Sign on and Choose  SAML option 
+
+Download Federation Metadata XML (Add identifier and reply url)
+add this URL https://testurl.com
+
+
+## AWS
+
+Choose your Identity Source 
+Change Idenity Source as External Identity Provider
+Download Metadata file for azure side 
+Browse and download the azure file here 
+
+
+
+------
+Azure 
+-------
+
+Upload Metadata file to Azure sAML Metadata section 
+
+
+---AWS
+Enable Automatic Provisioning
+
+https://scim.ap-south-1.amazonaws.com/lSwcbfdcff5-f374-4991-8141-0319ccf48ca9/scim/v2/
+
+95a2f2c4-7900-46f5-b843-a6726a940350:d0017938-4b81-4452-9e40-802e79f7b518:SoIhG+drq/SqS7wvvtEYGtevEYHpkwqSmqufCZPU4oz1WyaCtcn68axOqx1SkCvrlRwLZTARsQf3sA/OzJ3oOhmglNAG566JP2dOYbz2bnvX7frrrsbrPsNjXpCuey8tIPhe6UkyssqEns5Wb5Z7XtFbR+zfP2SoKko=:bi5KHfwzODSdaoyBQm3vMnwr6qqBMVFotSkjPnsPaI09UuRgrLx6b048VsktAVscoKYrof/rVBGwhuuLAWqDVja7hCQPwLAmaPJcx3CTsjBZjGaKjEiP9ByAtO/AvFx1qSUmsLxnIzxXmc3ETJp8dE9Bs+hGtoWEGIB1dOmUMo+SFFhwsVRAbOWfgHPTnXV0ZzhlXZQ/9JegiNo/6I6UxldAgDK8rxsQSPUjwRffCSska9mmMFaCwDX7SnRMyfjrCate4hNGYC1C5B5ARifdbzJkwHckPSOR5GGJon8Sm+dqJPvS5pH+FoTlOTgULZ8GI2Ib/zr/5tL9eYC+ec8eBw==
+
+------
+Azure
+-------
+
+Click on Provisioning
+
+Automatic
+
+Add Tenant URL as SCIM
+Add Secret Token 
+Test Connection 
+
+
+### Azure 
+
+Click on Mappings 
+Click on Provision Azure Active Directory Users
+Click on mailNickName and change source attribute to objectId 
+Click on email and change source atribute to userPrinicipalName
+
+Remove not needed attributes like telephoneNumber, 
+employeerid, department, mobile
+
+
+### Azure 
+
+Create Users and Groups
+
+Create Groups
+
+	Group Type : Security 
+	Add owners 
+
+Create InfoSec Group 
+Create reader Group
+Create admin Group 
+
+##
+Create Users
+
+john cena (part of infosec and reader group)
+roneyjadega (admin)
+
+## Mappings between users and groups 
+
+## Assign Groups to Application 
+
+##
+
+Go to your Enterprise application 
+add users and groups (left hand blade)
+
+## Proviosinig  ON
+
+## AWS 
+Check all users/groups reached to AWS
+
+## Create Permission set for administrator
+## Create permission set for readonly 
+
+AWS access portal URL
+
+
+AmazonDynamoDBFullAccess
+AmazonEC2ReadOnlyAccess
+AmazonS3FullAccess
+
+
+
+
+
+ 
+
+
+
+
+
+
+

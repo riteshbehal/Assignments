@@ -1,0 +1,345 @@
+Docker Version:
+===============
+$ sudo docker --version
+
+Install Docker:
+================
+$ sudo yum install docker -y
+
+Docker Status:
+===============
+$ ps -ef | grep docker
+
+Start Docker:
+==============
+$ sudo service docker start
+
+
+$ ps -ef | grep docker
+root      3369     1  1 09:52 ?        00:00:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=32768:65536
+ec2-user  3508  3202  0 09:52 pts/0    00:00:00 grep --color=auto docker
+----------------------------------------------------------------------------------------------------------------------------
+
+go to Root Path 
+sudo -i
+
+cd /var/lib/docker
+
+[ec2-user@ip-172-31-46-113 ~]$ cd /var/lib/docker/
+-bash: cd: /var/lib/docker/: Permission denied
+[ec2-user@ip-172-31-46-113 ~]$ sudo -i
+[root@ip-172-31-46-113 ~]# cd /var/lib/docker/
+[root@ip-172-31-46-113 docker]# ls
+buildkit  containers  image  network  overlay2  plugins  runtimes  swarm  tmp  trust  volumes
+[root@ip-172-31-46-113 docker]# cd
+[root@ip-172-31-46-113 ~]# exit
+logout
+
+
+Understanding Images:
+=====================
+Default Image: Are stored in Docker Hub(https://hub.docker.com/)
+Custom Image: Build by Docker User
+
+Explain about Docker Hub
+Search Images
+
+List Images:
+============
+$ sudo docker image ls
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+Base VM:
+=========
+$ cat /etc/system-release
+
+Pull Images:
+============
+$ sudo docker pull centos
+
+$ sudo docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+centos       latest    5d0da3dc9764   13 months ago   231MB
+
+
+List Container:
+===============
+$ sudo docker container ls
+
+
+$ sudo docker info # Detail Information about Docker Image, Container etc
+
+$ sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+Run Container:
+==============
+$ sudo docker run -it centos
+
+-it flag/switch: Interactive Terminal
+
+# cat /etc/os-release
+
+
+NAME="CentOS Linux"
+VERSION="8"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="8"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="CentOS Linux 8"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:8"
+HOME_URL="https://centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+CENTOS_MANTISBT_PROJECT="CentOS-8"
+CENTOS_MANTISBT_PROJECT_VERSION="8"
+[root@3837f3902c33 /]# ls
+bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+
+
+$ sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND       CREATED              STATUS              PORTS     NAMES
+3837f3902c33   centos    "/bin/bash"   About a minute ago   Up About a minute             upbeat_booth
+
+
+$ sudo docker image ls
+REPOSITORY   TAG          IMAGE ID       CREATED         SIZE
+ubuntu       latest       cdb68b455a14   8 hours ago     77.8MB
+centos       centos6.10   f1af727749c4   13 months ago   194MB
+centos       latest       5d0da3dc9764   13 months ago   231MB
+
+sudo docker pull ubuntu
+
+Run Container:
+==============
+$ sudo docker run -it ubuntu
+root@166c4cff8e09:/# cat /etc/os-release
+PRETTY_NAME="Ubuntu 22.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.1 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+
+$ sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
+166c4cff8e09   ubuntu    "bash"        50 seconds ago   Up 50 seconds             wizardly_sanderson
+3837f3902c33   centos    "/bin/bash"   6 minutes ago    Up 6 minutes              upbeat_booth
+
+*****************************************************************************************************************************
+
+NEXT
+
+$ sudo docker pull centos
+
+
+# This is my first docker file
+FROM ubuntu
+
+MAINTAINER <behal.ritesh@gmail.com>
+
+RUN apt-get update
+
+CMD ["echo", "This is my first dockerfile"]
+
+
+Build Docker Image:
+===================
+$ sudo docker build .
+
+Tag Name for Custom Image:
+==========================
+$ sudo docker build --tag zahraimage1:v1 .
+
+
+Push Image from Docker to Docker-Hub:
+=====================================
+$ sudo docker login 
+
+-----------TAG
+sudo docker tag centos:latest dockercorona/centos:latest
+
+-----------Check New image above created 
+sudo docker image ls
+
+-------------------------
+sudo docker push dockercorona/centos:latest
+
+
+
+
+
+
+
+============================================================================================================================================================
+============================================================================================================================================================
+============================================================================================================================================================
+
+Network 
+
+sudo docker network ls
+
+
+NETWORK ID     NAME      DRIVER    SCOPE
+04aa42793684   bridge    bridge    local
+b6baf292517b   host      host      local
+eb0893109d22   none      null      local
+
+============================================================================================================================================================
+$ sudo docker network create riteshnan
+
+
+================== Network Inspect 
+
+sudo docker network inspect riteshnan
+
+================== Calculation IP's
+
+www.CIDR.xYZ
+
+================== App run
+
+sudo docker run -dt --name c2 --network riteshnan alpine sleep 1d
+
+
+================== Inspect Again
+sudo docker network inspect riteshnan
+
+
+==============================================================
+Swarm
+==============================================================
+
+-----------------------------------------------------------------------------------------------------------------------------
+Docker Swarm:
+=============
+Multiple Docker
+
+Need Docker on each VM
+
+Docker should be up and running in each VM
+
+-----------------------------------------------
+Manager Node:
+=============
+$ sudo docker info
+.....
+.....
+Swarm: inactive
+.....
+.....
+
+$ sudo docker swarm init --advertise-addr <IP-address>
+
+$ sudo docker swarm init --advertise-add 13.127.173.186
+
+# sudo docker node ls
+ID                            HOSTNAME                                       STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+9fnzhrn41e1ktcp35ggknzr52 *   ip-172-31-46-113.ap-south-1.compute.internal   Ready     Active         Leader           20.10.17
+
+$ sudo docker info
+
+ Swarm: active
+
+$ sudo docker swarm init --advertise-addr 13.127.173.186
+Swarm initialized: current node (9fnzhrn41e1ktcp35ggknzr52) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3jwdkmpu8nrgvmo25gaidyqme5604wmufr3j56shn2fastvxcw-6vjm4ad7yqs73uo3mlwnmm707 13.127.173.186:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+
+
+*****************************************************************************************************************************
+31-10-2022(Monday) | Class-16
+==============================
+
+-----------------------------------------------------------------------------------------------------------------------------
+Worker Nodes:
+=============
+$ sudo docker swarm join --token SWMTKN-1-3jwdkmpu8nrgvmo25gaidyqme5604wmufr3j56shn2fastvxcw-6vjm4ad7yqs73uo3mlwnmm707 13.127.173.186:2377
+
+Issue:
+======
+$ sudo docker swarm join --token SWMTKN-1-3jwdkmpu8nrgvmo25gaidyqme5604wmufr3j56shn2fastvxcw-6vjm4ad7yqs73uo3mlwnmm707 13.127.173.186:2377
+Error response from daemon: Timeout was reached before node joined. The attempt to join the swarm will continue in the background. Use the "docker info" command to see the current swarm status of your node.
+
+
+Solution:
+=========
+Check IP Address for Manager Node
+
+Leave as Manager Node then re-initalize
+
+$ sudo docker swarm leave
+Error response from daemon: You are attempting to leave the swarm on a node that is participating as a manager. Removing the last manager erases all current state of the swarm. Use `--force` to ignore this message.
+
+Solution:
+=========
+$ sudo docker swarm leave --force
+
+Node left the swarm.
+[ec2-user@ip-172-31-46-113 ~]$ sudo docker node ls
+Error response from daemon: This node is not a swarm manager. Use "docker swarm init" or "docker swarm join" to connect this node to swarm and try again.
+
+
+$ sudo docker swarm init --advertise-addr 172.31.46.113
+Swarm initialized: current node (s9g7rlcgibli66jcdmeiyl3d4) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-596ntckvbxysir5ry47jpd6d1ae7oppuwlfb3nn78otyu454bc-59q98z9u2gqohu1gzx2efg3so 172.31.46.113:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+
+Working with Worker Node:
+==========================
+$ sudo docker swarm join --token SWMTKN-1-596ntckvbxysir5ry47jpd6d1ae7oppuwlfb3nn78otyu454bc-59q98z9u2gqohu1gzx2efg3so 172.31.46.113:2377
+This node joined a swarm as a worker.
+
+
+$ sudo docker node ls
+ID                            HOSTNAME                                       STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+wy99bibenz2t6pd27sog2zqca     ip-172-31-43-160.ap-south-1.compute.internal   Ready     Active                          20.10.17
+s9g7rlcgibli66jcdmeiyl3d4 *   ip-172-31-46-113.ap-south-1.compute.internal   Ready     Active         Leader           20.10.17
+
+
+Docker Service:
+===============
+$ sudo docker service ls
+ID        NAME      MODE      REPLICAS   IMAGE     PORTS
+
+
+To creating a service:
+=======================
+$ sudo docker  service create – replicas <number-of-replicas> -- publish <port-mapping> <image-name>
+
+$ sudo docker service create --name web1 --replicas 2 -p 80:80 nginx:latest
+
+kw0vrogyd12b13t8snw17yxgk
+overall progress: 2 out of 2 tasks
+1/2: running   [==================================================>]
+2/2: running   [==================================================>]
+verify: Service converged
+
+[ec2-user@ip-172-31-46-113 ~]$ sudo docker service ls
+ID             NAME      MODE         REPLICAS   IMAGE          PORTS
+kw0vrogyd12b   web1      replicated   2/2        nginx:latest   *:80->80/tcp
+
+[ec2-user@ip-172-31-46-113 ~]$ ps -ef|grep nginx
+root      4217  4197  0 09:57 ?        00:00:00 nginx: master process nginx -g daemon off;
+101       4361  4217  0 09:57 ?        00:00:00 nginx: worker process
+ec2-user  4413  3216  0 09:58 pts/0    00:00:00 grep --color=auto nginx
+
+Access nginx GUI by Manager Node IP Address:
+============================================

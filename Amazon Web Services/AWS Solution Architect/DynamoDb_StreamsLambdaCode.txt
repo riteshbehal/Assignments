@@ -1,0 +1,43 @@
+import json
+
+def lambda_handler(event, context):
+	try:
+		for record in event['Records']:
+			if record['eventName'] == 'INSERT':
+				InsertItem(record)
+			elif record['eventName'] == 'MODIFY':
+				UpdateItem(record)
+			elif record['eventName'] == 'REMOVE':
+				DeleteItem(record)
+		return "Success!"
+	except Exception as e: 
+		print(e)
+		return "Error"
+		
+
+def InsertItem(record):
+	print("Inserting New Item")
+	
+	newCustomer = record['dynamodb']['NewImage']
+	newCustomerId = newCustomer['CustomerId']['N']
+	print ('New row added with customerId=' + newCustomerId)
+	
+
+def UpdateItem(record):
+	print("Updating existing Item")
+	
+	oldCustomer = record['dynamodb']['OldImage']
+	oldAge = oldCustomer['Age']['N']
+	
+	newCustomer = record['dynamodb']['NewImage']
+	newAge = newCustomer['Age']['N']
+
+	if oldAge != newAge:
+		print('Age changed - oldAge=' + str(oldAge) + ', newAge=' + str(newAge))
+
+def DeleteItem(record):
+	print("Removing Data")
+
+	oldCustomer = record['dynamodb']['OldImage']
+	oldCustomerId = oldCustomer['CustomerId']['N']
+	print ('Row removed with customerId=' + oldCustomerId)

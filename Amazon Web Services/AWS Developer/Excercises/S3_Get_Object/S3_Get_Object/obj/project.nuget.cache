@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1ehMb8pv5VeK2lRrFwtKfBQmntF3gM+cytZUCigIj5/pR23n6YaZH3mc/qCBvFzV7dZorZAiuG6JPXGzrbB9zw==",
+  "success": true,
+  "projectFilePath": "E:\\AWS Devloper Excercises\\S3_Get_Object\\S3_Get_Object\\S3_Get_Object.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ritesh Behal\\.nuget\\packages\\awssdk.core\\3.7.400.10\\awssdk.core.3.7.400.10.nupkg.sha512",
+    "C:\\Users\\Ritesh Behal\\.nuget\\packages\\awssdk.s3\\3.7.402.1\\awssdk.s3.3.7.402.1.nupkg.sha512"
+  ],
+  "logs": []
+}
