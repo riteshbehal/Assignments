@@ -1,0 +1,1 @@
+az storage account create -n "newstore4434432143" -g "demo-grp" --kind "StorageV2" --sku "Standard_LRS"

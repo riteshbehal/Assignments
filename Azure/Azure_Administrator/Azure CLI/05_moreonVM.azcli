@@ -1,0 +1,4 @@
+az vm image list --output table
+az vm list-sizes --location "North Europe"
+
+az vm create -g "demo-grp" -n "appvm" --image "MicrosoftWindowsServer:WindowsServer:2022-Datacenter:latest" --admin-username "appusr" --size "Standard_DS1_v2" --vnet-name "app-network" --subnet "SubnetA"

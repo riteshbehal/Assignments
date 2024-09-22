@@ -1,0 +1,1 @@
+az vm create -g "demo-grp" -n "appvm" --image Win2019Datacenter --admin-username "appusr"

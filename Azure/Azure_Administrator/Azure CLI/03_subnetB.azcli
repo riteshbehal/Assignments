@@ -1,0 +1,1 @@
+az network vnet subnet create -n "SubnetB" --address-prefixes 10.0.1.0/24 -g "demo-grp" --vnet-name "app-network"

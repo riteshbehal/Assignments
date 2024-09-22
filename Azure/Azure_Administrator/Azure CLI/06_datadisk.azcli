@@ -1,0 +1,3 @@
+az disk create -n "data-disk" -g "demo-grp" -l "North Europe" --size-gb 16
+
+az vm disk attach --vm-name "appvm" --lun 0 -g "demo-grp" -n "data-disk"

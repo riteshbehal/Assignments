@@ -1,0 +1,1 @@
+az vmss create -n "app-set" -g "demo-grp" --admin-username "appusr" --image "MicrosoftWindowsServer:WindowsServer:2022-Datacenter:latest" --vm-sku "Standard_DS2_v2"
