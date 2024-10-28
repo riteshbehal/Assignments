@@ -1,3 +1,0 @@
-az appservice plan create -n "demoplan44312124" -g "demo-grp" --sku F1
-
-az webapp create -n "webapp55312214434" -g "demo-grp" --plan "demoplan44312124"

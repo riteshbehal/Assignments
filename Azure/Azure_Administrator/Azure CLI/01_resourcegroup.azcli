@@ -1,1 +1,0 @@
-az group create --location "North Europe" --name "demo-grp"
